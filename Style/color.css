@@ -1,0 +1,8 @@
+:root{
+    /* background-color */
+    --bg-c-primary: #661f13;
+    --bg-c-secondary: #e9dbc9;
+    /* text-color  */
+    --text-c-primary: #e9dbc9;
+    --text-c-secondary: #661f13;
+}

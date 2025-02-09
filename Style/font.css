@@ -1,0 +1,27 @@
+@font-face {
+    font-family: 'LoveLightRegular';
+    src: url('../sources/fonts/Love_Ya_Like_A_Sister/LoveYaLikeASister-Regular.ttf');
+    display: swap;
+}
+@font-face {
+    font-family: 'DancingScript';
+    src: url('../sources/fonts/Dancing_Script/DancingScript-VariableFont_wght.ttf');
+    display: swap;
+}
+@font-face {
+    font-family: 'Pangolin';
+    src: url('../sources/fonts/Pangolin/Pangolin-Regular.ttf');
+    display: swap;
+}
+@font-face {
+    font-family: 'PinyonScript';
+    src: url('../sources/fonts/PinyonScript-Regular.ttf');
+    display: swap;
+}
+:root{
+    /* font-family */
+    --font-family-primary: 'Pangolin', sans-serif;
+    --font-family-secondary: 'DancingScript', sans-serif;
+    --font-family-tertiary: 'LoveLightRegular', sans-serif;
+    --font-family-quaternary: 'PinyonScript', sans-serif;
+}

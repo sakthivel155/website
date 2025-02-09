@@ -1,0 +1,38 @@
+
+.container {    
+    background-color: var(--bg-c-primary);
+   position: relative;
+   
+}
+.container1{
+    background-color: var(--bg-c-secondary);
+    position: relative;
+}
+.container2{
+    background-color: var(--bg-c-secondary);
+    position: relative;
+    height: 50vh;
+}
+.content{
+    position: absolute;
+    top: 30%;
+    right: 5%;
+    width: 50%;
+    text-align: right;
+    font-size: .79rem;
+}
+.bg-img{
+    width: 100%;
+    height: 50vh;
+    display: block;
+    object-fit: cover; 
+    object-position: left; 
+
+}
+.bg-img1{
+    width: 100%;
+    height: 50vh;
+    display: block;
+    object-fit: cover; 
+    object-position: right; 
+}
