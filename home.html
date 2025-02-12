@@ -6,7 +6,31 @@
   <title>Happy Valentine's Day</title>
 <link rel="stylesheet" href="./Style/index.css">
 <link rel="icon" href="./sources/icons/love.png" type="image/png">
-<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"></head>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<style>
+@keyframes floatHeart {
+      0% {
+        transform: translateY(200vh) scale(0.2);
+        opacity: 0;
+      }
+      90% {
+        opacity: .8;
+      }
+      100% {
+        transform: translateY(-100vh) scale(1);
+        opacity: 0;
+      }
+    }
+    .heart {
+      position: absolute;
+      bottom: 0;
+      font-size: 20px;
+      color: #661f13;
+      z-index: 1;
+      animation: floatHeart 6s linear infinite;
+    }
+    
+</style></head>
 <body>
     <section>
         <div class="container">
@@ -15,7 +39,7 @@
             <div class="content">
                 <div>
                     <h1 data-aos="fade-up" data-aos-duration="2000">Happy Valentine's Day</h1>
-                    <img data-aos="fade-left" data-aos-duration="2000" src="./sources/icons/love.png" class="heart" alt="">
+                    <img data-aos="fade-left" data-aos-duration="2000" src="./sources/icons/love.png" class="heart-img" alt="">
                 </div>
                 <img data-aos="fade-up" data-aos-duration="2000" class="home-png" src="./sources/icons/output-onlinepngtools.png"  alt="">
                 
@@ -27,35 +51,88 @@
     <section>
         <div class="container1">
             <img src="./sources/images/5.png" alt="" class="bg-img" data-aos="fade-right" data-aos-duration="2500">
-            <p class="qoute" data-aos="fade-right" data-aos-duration="2500" >Nothing is impossible for us when we are together! You make my life complete and full of joy. I'm glad I've found a partner in life and love! Love you to the moon and back!</p>
-        </div>
-   
-    </section>
-    <section>
-        <div class="container2">            
-            <div class="content">
-              
-                
+            <div class="photo-frame">
+                <div>
+                    <img src="./sources/images/photos/IMG-20250209-WA0006.jpg" alt=""  data-aos="fade-right" data-aos-duration="2500">
+                </div>
+                <div>
+                    <p  data-aos="fade-left" data-aos-duration="2500">Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates in aspernatur earum obcaecati, hic exercitationem nulla quia architecto numquam eaque laboriosam porro a aliquam minima repellendus cum expedita, cupiditate tempore.</p>
+                </div>
             </div>
-            
         </div>
     </section>
+ 
+    <section>
+        <div class="container2">
+          
+            <div class="photo-frame" data-aos="fade-up" data-aos-duration="2000">
+                <div>
+                    <img src="./sources/images/photos/IMG-20250209-WA0022.jpg" alt="">
+                </div>
+                <div>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates in aspernatur earum obcaecati, hic exercitationem nulla quia architecto numquam eaque laboriosam porro a aliquam minima repellendus cum expedita, cupiditate tempore.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        <div class="container3">
+            <img src="./sources/images/2.png" alt="" class="bg-img" data-aos="fade-right" data-aos-duration="2000">
+            
+            <div class="photo-frame">
+                <div>
+                    <p  data-aos="fade-right" data-aos-duration="2500">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+                <div>
+                    <img src="./sources/images/photos/IMG-20250209-WA0008.jpg" alt=""  data-aos="fade-left" data-aos-duration="2000">
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section>
         <div class="container1">
             <img src="./sources/images/5.png" alt="" class="bg-img1" data-aos="fade-left" data-aos-duration="2000">
             
-            <div class="content">
-                <div data-aos="zoom-in" data-aos-duration="1000">
-                    <h1>Happy Valentine's Day</h1>
-                </div>
-                
+            <div class="photos-frame">
+                   
+                    <img src="./sources/images/photos/IMG-20250209-WA0005.jpg" alt="" data-aos="fade-down" data-aos-duration="2000">
+                    <img src="./sources/images/photos/IMG-20250209-WA0004.jpg" alt="" data-aos="fade-up" data-aos-duration="2000">
+                    <img src="./sources/images/photos/IMG-20250209-WA0009.jpg" alt="" data-aos="fade-down" data-aos-duration="2000">
+                    <img src="./sources/images/photos/IMG-20250209-WA0003.jpg" alt="" data-aos="fade-up" data-aos-duration="2000">
+        
             </div>
-            
+            <div class="last-word">
+                <p  data-aos="fade-right" data-aos-duration="2000">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae, nihil non. Sequi ex corrupti dolorem aliquid animi fugiat eius, id ullam, quos tempore dolorum. Mollitia officia magnam quibusdam explicabo minus.
+                </p>
+            </div>
         </div>
     </section>
+    
 </body>
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 <script>
     AOS.init();
+    
+    // Create floating hearts
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.innerHTML = '❤️';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = (Math.random() * 8 + 8 ) + 's';
+      heart.style.fontSize = (Math.random() * 15 + 15) + 'px';
+      document.body.appendChild(heart);
+
+      // Remove heart after animation completes
+      heart.addEventListener('animationend', () => {
+        heart.remove();
+      });
+    }
+
+    // Create new hearts periodically
+    setInterval(createHeart, 1500);
   </script>
 </html>
