@@ -1,5 +1,6 @@
 
 .container {    
+    overflow: hidden;
     background-color: var(--bg-c-primary);
    position: relative;
    
@@ -15,9 +16,9 @@
 }
 .content{
     position: absolute;
-    top: 30%;
+    top: 25%;
     right: 5%;
-    width: 50%;
+    width: 51%;
     text-align: right;
     font-size: .79rem;
 }
@@ -35,4 +36,30 @@
     display: block;
     object-fit: cover; 
     object-position: right; 
+}
+.qoute{
+    position: absolute;
+    top: 25%;
+    right: 7%;
+    text-align:right;
+    width: 200px;
+    font-family: var(--font-family-primary);
+    font-size: 1rem;
+    color: var(--text-c-secondary);
+    text-align: center;
+    margin-top: 10%;
+}
+.home-png{
+    position: absolute;
+    top: 90px; 
+    left: 15px;
+    width: 100%;
+    object-fit: cover;
+
+}
+.heart{
+    
+    margin-top: -20px;
+    
+
 }
